@@ -1,0 +1,13 @@
+제목:<%=@posts.title%><br>
+내용:<%=@posts.content%><br><br><br>
+
+comment<br><br>
+
+<% @posts.comments.each do |x|%>
+    댓글 : <%=x.content%> <br>
+<%end%>
+
+<form action = '/home/<%=@posts.id%>/comments/create' method = 'post'>
+    <textarea name='content'></textarea>
+    <input type='submit' value='작성'><br>
+</form>

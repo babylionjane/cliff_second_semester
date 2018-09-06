@@ -1,0 +1,8 @@
+<h1>Home#new</h1>
+<p>Find me in app/views/home/new.html.erb</p>
+<form action = '/home/create' method = 'post'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    제목: <input type = 'text' name = 'post_title'><br><br>
+    내용: <textarea name = 'post_content'></textarea><br>
+    <input type='submit' value='제출'>
+</form>

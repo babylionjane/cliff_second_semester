@@ -1,0 +1,7 @@
+<h1>게시물 목록</h1>
+<%@posts.each do |x|%>
+    <a href='/home/<%=x.id%>'><%=x.title%></a><br>
+    <a href='/home/destroy/<%=x.id%>'>게시글 삭제</a><br>
+<%end%>
+<br>
+<a href='/home/new'>새로운 글쓰기</a>
